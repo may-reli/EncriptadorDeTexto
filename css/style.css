@@ -1,0 +1,318 @@
+:root {
+    --dark-100:#609ED4;
+    --dark-200:#356EA9;
+    --dark-300:#0A3871;
+    --dark-400:#072B61;
+    --dark-500:#052051;
+
+    --light-100: #F3F5FC;
+    --light-200: #EFF1FA;
+    --light-300: #E9ECF8;
+    --light-400: #AAB2D5;
+    --light-500: #757FB2;
+
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-500: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+
+    --secundario:#D8DFE8;
+    --blanco:#FFFFFF;
+
+    --fuente : 'Inter', sans-serif;
+}
+* {
+    margin: 0;
+}
+html {
+    /* Para ahcer que 1rem = 10px */
+    font-size: 62.5%;   
+    box-sizing: border-box;
+    /* fin  Snippet modelo caja : www-paulirish-com*/
+}
+
+/*Snippet de https://www-paulirish-com.translate.goog/2012/box-sizing-border-box-ftw/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc*/
+/* inicio Snippet modelo caja de: www-paulirish-com */
+/*
+ eel primer "*" indica que seleccione todos los elementos del html y a esos se les aplicara el box-sizing : ingherit
+ al cual el padding, el margen y el borde se tomara dekk width declarado, es decir si declaras 200 de width
+ y tambien le defines un pading de 20px el elemento seguira midiendo 200 sin importar cuanto aumente el padding o el border
+*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente);
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--light-100);
+    
+}
+
+main {
+    margin-left: 30px;
+    margin-right: 30px;
+    max-width: 1200px;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* para pantallas mayores a 769 px*/
+@media (min-width: 769px) {
+    main {
+        flex-direction: row;
+        margin: 40px 90px;
+        justify-content: space-evenly;
+
+    }
+}
+    
+
+
+
+.seccion1 {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+
+/* Pantallas mayores a 768px*/
+@media (min-width: 769px) {
+    .seccion1 {
+        width: 70%;
+        height: 90%;
+        margin: 10px;
+    }
+    
+}
+.encriptador {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.message-in {
+    border: none;
+    font-size: 15px;
+    font-family: var(--fuente);
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    resize: none;
+    outline: none; 
+    background: transparent;
+}
+/* pantallas mayores a 768px*/
+@media (min-width: 769px) {
+    .message-in {
+        width: 70%;
+        height: 100%;
+    }
+}
+.instrucciones {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.instrucciones p {
+    margin-left: 5px;
+}
+/* pantallas mayores a 768px*/
+@media (min-width: 769px) {
+    .instrucciones {
+        width: 70%;
+    }
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+
+    
+}
+@media (min-width: 481px) {
+    .contenedor-botones {
+        flex-direction: row;
+    }
+}
+@media (min-width: 769px) {    
+    /* Contenedor de los botones Encriptar y desencriptar */
+    .contenedor-botones {
+        width: auto;
+    }
+}
+
+.btn-encriptar {
+
+    border: solid 1px var(--dark-300);
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+
+    background-color: var(--dark-300);
+    color: var(--blanco);
+    margin-right: 10px;
+}
+
+@media (min-width: 769px) {
+    .btn-encriptar {
+        width: 230px;
+    }
+}
+
+.btn-desencriptar {
+
+    border: solid 1px var(--dark-300);
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--secundario);
+    color: var(--dark-300);
+    margin-top: 10px;
+}
+
+@media (min-width: 480px) {
+    .btn-desencriptar {
+        margin-top: 0px;
+    }
+}
+@media (min-width: 769px) {
+    .btn-desencriptar {
+        width: 230px;
+    }
+}
+
+.seccion2 {
+    background-color: var(--blanco);
+    /* shadow */
+    box-shadow: 10px 24px 32px 0px rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* min-width: min-content; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+@media (min-width: 769px) {
+    .seccion2 {
+        width: 23%;
+        height: 90%;
+        margin: 10px;
+    }
+}
+
+.dibujo {
+    display: none;
+}
+/* para pantallas mayores a 768px*/
+@media (min-width: 769px) {
+    .contenedor-dibujo {
+        margin-top: 50px;
+        width: 70%
+    }
+    .dibujo {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+.contenedor-desencriptado-1 h2 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+}
+
+.contenedor-desencriptado-1 p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (min-width: 769px) {
+    .contenedor-desencriptado-1 p {
+        margin: 10px;
+    }
+}
+.contenedor-desencriptado-2{
+    display: none;
+}
+.message-out{
+    border: none;
+    font-size: 15px;
+    font-family: var(--fuente);
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    resize: none;
+    outline: none; 
+    background: transparent;
+}
+
+
+.contenedor-btn-copiar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+@media (min-width: 769px) {    
+    /* Contenedor de los botones Encriptar y desencriptar */
+    .contenedor-btn-copiar {
+        margin: 5px;
+    }
+}
+
+.btn-copiar {
+    
+    border: solid 1px var(--dark-300);
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: var(--secundario);
+    color: var(--dark-300);
+    width: 80%;
+}
+@media (min-width: 769px) {
+    .btn-copiar {
+        width: 90%
+    }
+}
